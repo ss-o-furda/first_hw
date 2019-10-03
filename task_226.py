@@ -4,6 +4,7 @@
 
 def task_226():
     print('Введіть натуральні N i M, щоб отримати всі їх натуральні спільні кратні, менші mn.')
+
     while True:
         n = input('Введіть натуральне N:\n')
         if not n.isdigit():
@@ -35,7 +36,6 @@ def task_226():
     #         s_k_n.append(i)
     #     if i % m == 0:
     #         s_k_m.append(i)
-    print(f'Числа, кратні {n} у проміжку 1..{mn}:\n{s_k_n}')
-    print(f'Числа, кратні {m} у проміжку 1..{mn}:\n{s_k_m}')
     s_k = sorted(list(set(s_k_n) & set(s_k_m)))
-    print(f'Числа, кратні {n} та {m} у проміжку 1..{mn}: {s_k}')
+
+    return n, m, mn, s_k_n, s_k_m, s_k

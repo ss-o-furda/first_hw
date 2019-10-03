@@ -30,4 +30,6 @@ def task_87():
                     m = int(m)
                     break
             break
-    print(f'Сума {m} останніх цифр числа {N} = {sum(n[-m:])}')
+    result = sum(n[-m:])
+
+    return m, N, result
