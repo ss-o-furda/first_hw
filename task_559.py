@@ -3,23 +3,8 @@
 import math
 
 
-def task_559():
-    print('Введіть натуральне N, щоб отримати числа Мерсенна, менші n.')
-    while True:
-        n = input('Введіть натуральне N:\n')
-        if not n.isdigit():
-            print('Схоже Ви ввели не число...')
-            continue
-        elif n == 0:
-            print('0 не є натуральним числом!')
-            continue
-        elif int(n) < 2:
-            print('Для простих чисел Мерсена, N має бути більше 2!')
-            continue
-        else:
-            n = int(n)
-            break
-
+def task_559(n):
+    
     num_mers = [(2 ** i - 1) for i in range(1, n + 1)]
     simple_num = []
 
@@ -39,4 +24,4 @@ def task_559():
     # for i in simple_num:
     #     simple_num_mers.append(2 ** i - 1)
 
-    return n, num_mers, simple_num_mers
+    return num_mers, simple_num_mers
