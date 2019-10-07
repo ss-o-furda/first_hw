@@ -7,3 +7,4 @@ def task_87(seq):
     result = sum(n[-m:])
 
     return result
+
